@@ -4,6 +4,7 @@ from random import choice
 
 
 def open_and_read_file(file_path):
+
     """Take file path as string; return text as string.
 
     Takes a string that is a file path, opens the file, and turns
@@ -11,7 +12,21 @@ def open_and_read_file(file_path):
     """
 
     # your code goes here
+    dict = {}
+    contents = open(file_path).read()
+    words = contents.split()
+    # print(words)
+    for i in range(len(words) -1):
+        try:
+            tup = words[i], words[i+1]
+            dict[tup] = words[i+2]
+            print(words[i+2], dict[tup])
+        except IndexError:
+            print("Index Error, breaking loop.")
+            break
 
+    print(dict)
+    
     return 'Contents of your file as one long string'
 
 
