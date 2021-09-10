@@ -1,6 +1,8 @@
 """Generate Markov text from text files."""
 
 from random import choice
+import string
+
 
 
 def open_and_read_file(file_path):
@@ -111,4 +113,19 @@ chains = make_chains(input_text)
 # Produce random text
 random_text = make_text(chains)
 
+
+
+new_name = []
+
+i = 0
+
+while i < 20:
+    new_name.append(choice(string.ascii_lowercase))
+    i += 1
+
+new_name.append(".txt")
+
+with open("".join(new_name), "x") as f:
+    f.write(random_text)
 print(random_text)
+print("".join(new_name))
