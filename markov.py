@@ -100,7 +100,7 @@ def make_text(chains):
     return ' '.join(words)
 
 
-input_path = 'gettysburg_copy.txt'
+input_path = 'moby_dick.txt'
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
