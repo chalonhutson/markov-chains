@@ -102,7 +102,7 @@ def make_text(chains):
     return ' '.join(words)
 
 
-input_path = 'moby_dick.txt'
+input_path = 'green-eggs.txt'
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
