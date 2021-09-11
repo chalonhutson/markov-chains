@@ -115,17 +115,17 @@ random_text = make_text(chains)
 
 
 
-new_name = []
+# new_name = []
 
-i = 0
+# i = 0
 
-while i < 20:
-    new_name.append(choice(string.ascii_lowercase))
-    i += 1
+# while i < 20:
+#     new_name.append(choice(string.ascii_lowercase))
+#     i += 1
 
-new_name.append(".txt")
+# new_name.append(".txt")
 
-with open("".join(new_name), "x") as f:
-    f.write(random_text)
-print(random_text)
-print("".join(new_name))
+# with open("".join(new_name), "x") as f:
+#     f.write(random_text)
+# print(random_text)
+# print("".join(new_name))
