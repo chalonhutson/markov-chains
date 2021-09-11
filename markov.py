@@ -113,7 +113,9 @@ input_text = open_and_read_file(input_path)
 chains = make_chains(input_text)
 
 # Produce random text
-random_text = make_text(chains)
+def get_random_text():
+    random_text = make_text(chains)
+    return random_text
 
 
 
@@ -145,7 +147,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    # TODO: replace this with your code
+    await message.channel.send("But not the one it needs right now.")
 
 os.environ.get('DISCORD_TOKEN')
 client.run(os.environ['DISCORD_TOKEN'])
