@@ -3,6 +3,8 @@
 from random import choice
 import string
 
+import os
+import discord
 
 
 def open_and_read_file(file_path):
@@ -129,3 +131,21 @@ random_text = make_text(chains)
 #     f.write(random_text)
 # print(random_text)
 # print("".join(new_name))
+
+client = discord.Client()
+
+
+@client.event
+async def on_ready():
+    print(f'Successfully connected! Logged in as {client.user}.')
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    # TODO: replace this with your code
+
+os.environ.get('DISCORD_TOKEN')
+client.run(os.environ['DISCORD_TOKEN'])
