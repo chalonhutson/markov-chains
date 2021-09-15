@@ -5,6 +5,7 @@ import string
 
 import os
 import discord
+from discord.ext import commands
 
 
 def open_and_read_file(file_path):
@@ -147,7 +148,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    await message.channel.send("But not the one it needs right now.")
+    await message.channel.send(get_random_text())
 
-os.environ.get('DISCORD_TOKEN')
+
+
 client.run(os.environ['DISCORD_TOKEN'])
