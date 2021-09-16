@@ -147,8 +147,15 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    if "sam i am" in message.content.lower():
+        bot_response = get_random_text()
+        print(message.author)
+        print(message.content)
+        print(type(message.content))
+        await message.channel.send(bot_response)
+        print("Green Eggs Bot responded: " + bot_response)
 
-    await message.channel.send(get_random_text())
+
 
 
 
